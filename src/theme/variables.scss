@@ -74,4 +74,16 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /** App theming **/
+  --ion-background-color: #fff; //cor do background de todo o app
+  --ion-toolbar-background: #ff5252; //background da toolbar
+  --ion-toolbar-color: #ffffff; //color toolbar title
+  --ion-text-color: #000; //cor do texto em todo o app, incluindo o titulo da toolbar
+  --ion-tab-bar-background: #ff5252; //cor do background da barra das tabs
+  --ion-tab-bar-color: rgba(255, 255, 255, 0.671); //cor do resto dos icones das tabs (os nao selecionados)
+  --ion-tab-bar-color-activated: #ffffff; //cor do icone selecionado na tab
+  --ion-color-step-550: #000; //color of <p>
+  --ion-color-step-850: #000; //color of card title
+  --ion-color-medium: #ff5252; //cor dos icones medios no corpo do app
 }
