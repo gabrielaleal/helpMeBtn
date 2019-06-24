@@ -1,0 +1,7 @@
+{
+  "name": "helpMeBtn",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
