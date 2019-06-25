@@ -7,5 +7,14 @@
 </ion-header>
 
 <ion-content>
-  
+  <ion-card style="margin: 50% 10px;">
+      <ion-card-header>
+        <ion-card-title>Botão de emergência</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        Caso esteja se sentindo insegura, acione o botão.
+        <ion-button (click)="sendGeoloc()" expand="full" size="large" strong color="danger">HELP</ion-button>
+      </ion-card-content>
+    </ion-card>
 </ion-content>

@@ -4,7 +4,7 @@
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #3880ff;
+  --ion-color-primary: #ff5252;
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
@@ -12,7 +12,7 @@
   --ion-color-primary-tint: #4c8dff;
 
   /** secondary **/
-  --ion-color-secondary: #0cd1e8;
+  --ion-color-secondary: #fa7272;
   --ion-color-secondary-rgb: 12, 209, 232;
   --ion-color-secondary-contrast: #ffffff;
   --ion-color-secondary-contrast-rgb: 255, 255, 255;
@@ -76,7 +76,7 @@
   --ion-color-light-tint: #f5f6f9;
 
   /** App theming **/
-  --ion-background-color: #fff; //cor do background de todo o app
+  --ion-background-color: rgb(245, 244, 244); //cor do background de todo o app
   --ion-toolbar-background: #ff5252; //background da toolbar
   --ion-toolbar-color: #ffffff; //color toolbar title
   --ion-text-color: #000; //cor do texto em todo o app, incluindo o titulo da toolbar
