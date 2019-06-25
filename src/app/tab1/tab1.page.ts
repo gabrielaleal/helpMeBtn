@@ -10,7 +10,6 @@ import { HttpClient } from '@angular/common/http'
 export class Tab1Page {
 
   private url = 'https://helpmeback.herokuapp.com'
-  private location
   constructor(private geolocation: Geolocation, private http: HttpClient) {}
 
   ionViewDidEnter(){
