@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { HttpClient } from '@angular/common/http'
 
+export interface Location {
+  lat: Number,
+  long: Number
+}
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -12,7 +16,9 @@ export class Tab1Page {
   private url = 'https://helpmeback.herokuapp.com'
   constructor(private geolocation: Geolocation, private http: HttpClient) {}
 
+  private location: Location = {'lat':0, 'long':0};
   ionViewDidEnter(){
+    console.log(this.location)
     this.geolocation.getCurrentPosition().then((resp) => {
       // resp.coords.latitude
       // resp.coords.longitude
@@ -22,6 +28,7 @@ export class Tab1Page {
     
     let watch = this.geolocation.watchPosition();
     watch.subscribe((data) => {
+      console.log(data.coords)
       this.location.lat = data.coords.latitude;
       this.location.long = data.coords.longitude;
     });
@@ -32,6 +39,8 @@ export class Tab1Page {
       x: this.location.lat,
       y: this.location.long
     }
-    return this.http.post(this.url + '/create_alarm', data)
+    return this.http.post(this.url + '/create_alarm', data).subscribe(res=>{
+      console.log(res);
+    })
   }
 }
