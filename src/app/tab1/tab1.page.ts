@@ -41,7 +41,7 @@ export class Tab1Page {
       y: this.location.long
     }
     return this.http.post(this.url + '/create_alarm', data).subscribe(res=>{
-      console.log(`res: ${JSON.stringify(res)}`);
+      console.log(`res: ${JSON.stringify(res.message)}`);
       let msg = res.message
       if(msg.includes("New alarm created")) {
         this.presentAlert();
