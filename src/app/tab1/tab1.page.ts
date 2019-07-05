@@ -42,7 +42,12 @@ export class Tab1Page {
     }
     return this.http.post(this.url + '/create_alarm', data).subscribe(res=>{
       console.log(`res: ${JSON.stringify(res)}`);
-      this.presentAlert();
+      let msg = res.message
+      if(msg.includes("New alarm created")) {
+        this.presentAlert();
+      } else if(msg.includes("error")) {
+        this.errorAlert();
+      }
     })
   }
 
@@ -50,6 +55,16 @@ export class Tab1Page {
     const alert = await this.alertController.create({
       header: 'Sua localização foi enviada',
       message: 'Aguarde pela ajuda ou ligue para um dos telefones úteis.',
+      buttons: ['OK']
+    });
+
+    await alert.present();
+  }
+
+  async errorAlert() {
+    const alert = await this.alertController.create({
+      header: 'Localização inválida',
+      message: 'Ligue o GPS ou verifique se seu dispositivo está conectado a Internet.',
       buttons: ['OK']
     });
 
